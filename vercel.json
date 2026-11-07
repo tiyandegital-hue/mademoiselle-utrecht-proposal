@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/diensten", "destination": "/diensten.html" },
+    { "source": "/lookbook", "destination": "/lookbook.html" },
+    { "source": "/contentkalender", "destination": "/contentkalender.html" },
+    { "source": "/over-ons", "destination": "/over-ons.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/privacy", "destination": "/privacy.html" }
+  ],
+  "headers": [
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
+  ]
+}
